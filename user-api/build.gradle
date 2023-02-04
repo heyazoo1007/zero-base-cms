@@ -4,9 +4,15 @@ plugins {
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 }
 
-group = 'com.zerobase.cms'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+group = 'com.zerobase.cms.user'
+
+repositories {
+	mavenCentral()
+}
+
+ext{
+	set('springCloudVersion', '2021.0.1')
+}
 
 configurations {
 	compileOnly {
@@ -14,19 +20,25 @@ configurations {
 	}
 }
 
-repositories {
-	mavenCentral()
-}
-
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	compileOnly 'org.projectlombok:lombok'
 	runtimeOnly 'com.h2database:h2'
+
+	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+dependencyManagement {
+	imports{
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	}
 }
 
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
