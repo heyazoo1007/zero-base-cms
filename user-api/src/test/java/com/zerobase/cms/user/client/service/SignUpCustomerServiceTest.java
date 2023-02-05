@@ -2,8 +2,6 @@ package com.zerobase.cms.user.client.service;
 
 import com.zerobase.cms.user.client.domain.SignUpForm;
 import com.zerobase.cms.user.client.domain.model.Customer;
-import org.assertj.core.api.Assert;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

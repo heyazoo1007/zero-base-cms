@@ -9,13 +9,15 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Locale;
 
-@Entity
+
 @Getter
+@Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @AuditOverride(forClass = BaseEntity.class)
-public class Customer extends BaseEntity{
+@Entity
+public class Customer extends BaseEntity {
 
     @Id
     @Column(name = "id", nullable = false)
