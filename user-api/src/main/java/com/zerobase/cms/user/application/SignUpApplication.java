@@ -1,10 +1,10 @@
 package com.zerobase.cms.user.application;
 
 import com.zerobase.cms.user.client.MailgunClient;
-import com.zerobase.cms.user.client.domain.SignUpForm;
-import com.zerobase.cms.user.client.domain.model.Customer;
+import com.zerobase.cms.user.domain.SignUpForm;
+import com.zerobase.cms.user.domain.model.Customer;
 import com.zerobase.cms.user.client.mailgun.SendMailForm;
-import com.zerobase.cms.user.client.service.SignUpCustomerService;
+import com.zerobase.cms.user.service.SignUpCustomerService;
 import com.zerobase.cms.user.exception.CustomException;
 import com.zerobase.cms.user.exception.ErrorCode;
 import lombok.RequiredArgsConstructor;

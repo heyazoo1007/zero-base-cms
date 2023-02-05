@@ -1,6 +1,6 @@
-package com.zerobase.cms.user.client.domain.model;
+package com.zerobase.cms.user.domain.model;
 
-import com.zerobase.cms.user.client.domain.SignUpForm;
+import com.zerobase.cms.user.domain.SignUpForm;
 import lombok.*;
 import org.hibernate.envers.AuditOverride;
 

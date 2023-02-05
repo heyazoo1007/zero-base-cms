@@ -1,4 +1,4 @@
-package com.zerobase.cms.user.client.domain;
+package com.zerobase.cms.user.domain;
 
 import lombok.Getter;
 
